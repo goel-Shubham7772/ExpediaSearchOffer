@@ -1,4 +1,3 @@
-
 function searchPackages() {
     var originCity = document.getElementById('originCity').value;
     var destinationCity = document.getElementById('destinationCity').value;
@@ -7,7 +6,7 @@ function searchPackages() {
         // Show loader while waiting for response
         document.getElementById('loader').style.display = 'block';
 
-        fetch(`/expedia/offers?originCity=${originCity}&destinationCity=${destinationCity}`)
+        fetch(`/search?originCity=${originCity}&destinationCity=${destinationCity}`)
             .then(response => response.json())
             .then(data => {
                 // Hide loader once response is received
